@@ -1,0 +1,30 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <fieldset>
+            <div class="form-group">
+                <label for="villano" class="form-label mt-4">
+                    Villano
+                </label>
+                <input type="text" class="form-control" id="villano" aria-describedby="villanoHelp" placeholder="Ingrese villano" formControlName="villano" />
+                <small id="villanoHelp" class="form-text text-muted">
+                    Nunca compartiremos su villano con nadie más.
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="pelicula" class="form-label mt-4">
+                    Película
+                </label>
+                <input type="text" class="form-control" id="pelicula" placeholder="Ingrese la pelicula de su villano" formControlName="pelicula" />
+            </div>
+            <div class="form-group">
+                <label for="color" class="form-label mt-4">
+                    Color
+                </label>
+                <input type="text" class="form-control" id="color" aria-describedby="ColorHelp" placeholder="Color favorito de su villano" formControlName="color" />
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+                Enviar
+            </button>
+        </fieldset>
+    </form>
+</div>
